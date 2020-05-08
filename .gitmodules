@@ -1,0 +1,3 @@
+[submodule "themes/hugo-minimal-blog-theme"]
+	path = themes/hugo-minimal-blog-theme
+	url = https://github.com/nikhil-vemula/hugo-minimal-blog-theme.git
