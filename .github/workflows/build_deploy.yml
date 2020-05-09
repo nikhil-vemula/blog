@@ -19,9 +19,13 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    - name: Buid with hugo
-      run: hugo -D
+    
+    - name: Run Hugo
+      uses: crazy-max/ghaction-hugo@v1
+      with:
+        version: latest
+        extended: false
+        args: -D --cleanDestinationDir --minify --verbose
 
     - name: Deploy
       run: ./deploy.sh
