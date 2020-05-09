@@ -30,13 +30,11 @@ jobs:
         extended: false
         args: -D --minify --verbose
 
-    - name: Git status
-      run: git status
-
     - name: Deploy
       run: |
+        git status
         cd public
         git config --global user.name 'Nikhil Vemula'
         git config --global user.email 'nikhil-vemula@users.noreply.github.com'
         git commit -am "Rebuilding site"
-        git push
+        git push origin HEAD:master
