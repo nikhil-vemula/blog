@@ -28,7 +28,7 @@ jobs:
       with:
         version: latest
         extended: false
-        args: -D --cleanDestinationDir --minify --verbose
+        args: -D --minify --verbose
 
     - name: Deploy
       run: ./deploy.sh
