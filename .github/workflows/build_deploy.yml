@@ -31,10 +31,10 @@ jobs:
         args: -D --minify --verbose
 
     - name: Go to public directory
-      run: cd public
-
-    - name: Git status
-      run: git status
+      run: |
+        cd public
+        pwd
+        git status
 
     - name: Git Commit and Push
       uses: github-actions-x/commit@v2.6
