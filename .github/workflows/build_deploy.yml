@@ -20,6 +20,9 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
+    - name: Git Submodules Init
+      uses: chris-short/github-action-git-submodules@v0.1.0
+    
     - name: Run Hugo
       uses: crazy-max/ghaction-hugo@v1
       with:
