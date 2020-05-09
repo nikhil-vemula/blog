@@ -33,6 +33,9 @@ jobs:
     - name: Go to public directory
       run: cd public
 
+    - name: Git status
+      run: git status
+
     - name: Git Commit and Push
       uses: github-actions-x/commit@v2.6
       with:
