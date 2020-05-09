@@ -19,8 +19,6 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-      with:
-        github_token: ${{ secrets.SECRET_KEY }}
       
     - name: Fetch submodules
       run: git submodule update --init --recursive
@@ -32,11 +30,10 @@ jobs:
         extended: false
         args: -D --minify --verbose
 
-    - name: Deploy
-      run: |
-        git status
-        cd public
-        git config --global user.name 'Nikhil Vemula'
-        git config --global user.email 'nikhil-vemula@users.noreply.github.com'
-        git commit -am "Rebuilding site"
-        git push origin HEAD:master
+    - name: Go to public directory
+      run: cd public
+
+    - name: Git Commit and Push
+      uses: github-actions-x/commit@v2.6
+      with:
+        github-token: ${{ secrets.SECRET_KEY }}
