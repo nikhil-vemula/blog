@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://nikhil-vemula.github.io/"
 languageCode = "en-us"
 title = "Nikhil Vemula"
 theme = "hugo-minimal-blog-theme"
@@ -17,19 +17,19 @@ paginate = 5
   url = "https://github.com/nikhil-vemula"
 
 [[params.social]]
+  name = "linkedin"
+  icon = "fab fa-linkedin"
+  url = "https://www.linkedin.com/in/srinivasanikhil/"
+
+[[params.social]]
   name = "twitter"
   icon = "fab fa-twitter-square"
-  url = "https://github.com/nikhil-vemula"
+  url = "https://twitter.com/srinivasanikhil"
 
 [[params.social]]
   name = "facebook"
   icon = "fab fa-facebook-square"
-  url = "https://github.com/nikhil-vemula"
-
-[[params.social]]
-  name = "linkedin"
-  icon = "fab fa-linkedin"
-  url = "https://github.com/nikhil-vemula"
+  url = "https://www.facebook.com/nikhilvemula97"
 
 [[menu.main]]
 name = "Home"
