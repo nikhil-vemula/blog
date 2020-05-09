@@ -29,6 +29,10 @@ jobs:
         version: latest
         extended: false
         args: -D --minify --verbose
-
+      
     - name: Deploy
-      run: ./deploy.sh
+    run: |
+      git config --global user.name 'Nikhil Vemula'
+      git config --global user.email 'nikhil-vemula@users.noreply.github.com'
+      git commit -am "Rebuilding site"
+      git push
