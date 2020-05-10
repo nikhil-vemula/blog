@@ -6,7 +6,7 @@ set -e
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Build the project.
-hugo -D # if using a theme, replace with `hugo -t <YOURTHEME>`
+hugo -D --cleanDestinationDir --minify # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 cd public
@@ -22,4 +22,4 @@ fi
 git commit -m "$msg" --no-verify
 
 # Push source and build repos.
-git push origin master
+git push origin master --no-verify
