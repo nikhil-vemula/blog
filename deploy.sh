@@ -22,4 +22,18 @@ fi
 git commit -m "$msg" --no-verify
 
 # Push source and build repos.
+git push origin HEAD:master --no-verify
+
+cd ..
+
+# Git add
+git add .
+
+# Commit and push existing changes
+msg="Rebuilding site $(date)"
+if [ -n "$*" ]; then
+	msg="$*"
+fi
+git commit -m "$msg" --no-verify
+
 git push origin master --no-verify
