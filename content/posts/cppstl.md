@@ -114,6 +114,31 @@ void printSet(set<int> se) {
 }
 ```
 
+## Map
+
+* Retrive, find, erase take logn time.
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+void printMap(map<int, int> m);
+
+int main() {
+    map<char, int> m;
+    string name = "nikhil vemula";
+
+    for(char c: name) {
+        m[c]++;
+    }
+
+    cout << m['i'] << endl;
+    return 0;
+}
+```
+
 ## References
 
 [https://www.youtube.com/watch?v=g-1Cn3ccwXY](https://www.youtube.com/watch?v=g-1Cn3ccwXY)
