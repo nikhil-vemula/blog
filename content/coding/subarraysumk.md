@@ -3,10 +3,16 @@ title: "Number of sub arrays whose sum is K"
 date: 2020-05-14T14:05:54+05:30
 draft: true
 ---
+## Intuition
 
-## Sub Array
+If I can find all the sub arrays and find the sum of sub arrays. Then I count the number of sub arrays whose sum is k.
 
-* Continuous part of array.
+* All sub arrays
+* Sum of sub arrays
+
+## Sub Arrays
+
+* Continuous part of array is called sub array.
 * Number of sub arrays for array of length n is n*(n+1)/2
 
 * Example: [1, 2, 3]  
@@ -44,6 +50,8 @@ sum(k=1ton) n*(n-k)*k
 ```
 
 ### Approach 2
+
+This form gives advantage to reuse the sum till previous index.
 
 ```cpp
 #include <iostream>
