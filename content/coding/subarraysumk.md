@@ -145,6 +145,27 @@ int main() {
 }
 ```
 
+## Efficient
+
+Consider [4, 5, 1, 2, 3, 4, 3, 6]  
+Manually solving this for sum 9 gives:
+
+```bash
+[4, 5],  
+[2, 3, 4],  
+[3, 6]
+```
+
+* The sub arrays [4, 5] can be made directly with array the starting at position 0 with length 2.
+* The sub array [2, 3, 4] can be made by removing [4, 5, 1] from [4, 5, 1, 2, 3, 4]. i.e if current_sum exceeds required sum by a number which is sum of sub arrays. Then we can form a array by removing that array.
+In above Above. Sum of [4, 5, 1, 2, 3, 4] is 19 and required sum is 9. The current sum 19 exceeds reuiqred sum 9 by 10. which can made using [4, 5, 1].
+* Similarily [4, 5, 1, 2, 3, 4, 3, 6] sum 28 exceeds 9 by 18 which is sum of sub array [4, 5, 1, 2, 3, 4]
+
+So, if we can store a sum till current number in map and use it. We can solve the problem in O(n)
+
+Efficient solution at: [https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/](https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/)
+
 ## References
 
 * [https://www.geeksforgeeks.org/subarraysubstring-vs-subsequence-and-programs-to-generate-them/](https://www.geeksforgeeks.org/subarraysubstring-vs-subsequence-and-programs-to-generate-them/)
+* [https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/](https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/)
