@@ -113,7 +113,10 @@ int main() {
 }
 ```
 
-## Final
+## Brute force
+
+* Time complexity: O(n^2)
+* Space complexity: O(n)
 
 ```cpp
 #include <iostream>
