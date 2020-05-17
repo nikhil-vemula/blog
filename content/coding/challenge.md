@@ -23,4 +23,4 @@ type: post
 
 [Number of islands](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3302/)
 
-[https://nikhil-vemula.github.io/coding/numberofislands/](http://localhost:1313/coding/numberofislands/)
+[https://nikhil-vemula.github.io/coding/numberofislands/](https://nikhil-vemula.github.io/coding/numberofislands/)
