@@ -1,7 +1,7 @@
 ---
 title: "Segment Tree"
 date: 2020-05-31T11:16:11+05:30
-draft: true
+draft: false
 ---
 ## References
 
