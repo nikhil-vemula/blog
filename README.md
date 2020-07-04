@@ -5,7 +5,8 @@ Powered by [Hugo](https://gohugo.io/) static site generator.
 Clone with submodules
 
 ```bash
-git clone --recursive
+git clone <url>
+git submodule update --init --recursive
 ```
 
 Add post

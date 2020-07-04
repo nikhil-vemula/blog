@@ -190,6 +190,8 @@ for k, v := range details {
 
 An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 
+## Channels
+
 ## Code organization
 
 > [https://golang.org/doc/code.html](https://golang.org/doc/code.html)
