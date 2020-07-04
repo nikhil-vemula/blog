@@ -72,7 +72,7 @@ will go to single server.
 [https://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database](https://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database)
 
 * Take a master slave approach, and beaf up the master but eventually things will slow down.
-* Using no joing approach or noSql database and finally things will slow down and you will try to implement cache.
+* Using no joining approach or noSql database and finally things will slow down and you will try to implement cache.
 
 ### Notes on cache
 

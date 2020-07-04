@@ -46,7 +46,36 @@ Layers:
 
 * Technology
 * Protocol
-  * How to come
   * Authentication
   * Update to protocol
 * Token
+
+Participants
+
+* Nodes
+* Miners
+* Large mines
+* Mining pools
+
+### Bit coin monetary policy
+
+#### The Halving
+
+* Number of bit coins released into the system is halved every 210000 blocks.
+* 21 million coins will be released into system by 2140.
+* While mined coins are halved, it might be compensated by the transaction fee.
+
+#### Block frequency
+
+Block is created approximately every 10 mins.
+
+### Mining difficulty
+
+* The mining difficulty is adjusted every 2016 blocks (2 weeks)
+* Mining difficulty = current_target / max_target
+* If the 2016 blocks are mined faster than 2 weeks the mining difficulty is increased and vice versa.
+
+### How miners select their transactions
+
+* Select the transaction based on the transaction free.
+* If a given set of transactions failed to find the golden hash along with time stamp. They need to wait for next second. Instead they chose some other set of transactions in the mean while to not to waste the hashing power.
