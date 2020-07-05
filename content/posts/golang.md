@@ -186,11 +186,108 @@ for k, v := range details {
 
 ## Closures
 
+```go
+```
+
 ## Interfaces
 
 An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 
-## Channels
+```go
+package main
+
+import "fmt"
+
+type triangle struct {
+	base   float64
+	height float64
+}
+
+type square struct {
+	side float64
+}
+
+type shape interface {
+	getArea() float64
+}
+
+func (t triangle) getArea() float64 {
+	return 0.5 * t.base * t.height
+}
+
+func (s square) getArea() float64 {
+	return s.side * s.side
+}
+
+func PrintArea(s shape) {
+	fmt.Println(s.getArea())
+}
+
+func main() {
+	tri := triangle{10, 20}
+	squ := square{5}
+
+	PrintArea(tri)
+	PrintArea(squ)
+}
+
+```
+
+## Go routines
+
+A function can be called as a subroutine for concurrency
+
+## Channel
+
+* Can be used to communicate between the sub rouitines.
+* Channel can be of a given data type.
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"time"
+)
+
+func main() {
+	links := []string{
+		"https://www.google.com",
+		"https://www.facebook.com",
+		"https://www.stackoverflow.com",
+		"https://www.golang.org",
+		"https://www.amazon.com",
+	}
+
+	c := make(chan string)
+
+	for _, link := range links {
+		go checkLink(link, c)
+	}
+
+	for l := range c {
+		go func(link string) {
+			time.Sleep(2 * time.Second)
+			checkLink(link, c)
+		}(l)
+	}
+}
+
+func checkLink(link string, c chan string) {
+	_, err := http.Get(link)
+
+	if err != nil {
+		fmt.Println(link, " is down", err)
+		c <- link
+		return
+	}
+	fmt.Println(link, " is up")
+	c <- link
+}
+
+```
+
 
 ## Code organization
 
